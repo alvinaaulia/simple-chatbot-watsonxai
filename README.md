@@ -1,5 +1,5 @@
 # simple-chatbot-watsonxai
-Simple chatbot dengan menggunakan library LangChain dan IBM Watsonx AI model yang diintegrasikan dengan UI Chatbot Streamlit. Menggunakan model meta-llama/llama-2-13b-chat dengan maksimal responses sebanyak 500 tokens. Simple chatbot ini merupakan hasil belajar yang saya lakukan untuk memperdalam pengetahuan saya terkait pembuatan chatbot menggunakan model yang telah disediakan oleh pihak ke-tiga (di sini adalah IBM Cloud).
+Simple chatbot dengan menggunakan library LangChain dan IBM Watsonx AI model yang diintegrasikan dengan UI Chatbot Streamlit. Menggunakan model meta-llama/llama-2-13b-chat dengan maksimal responses sebanyak 500 tokens. Simple chatbot ini merupakan hasil belajar yang saya lakukan untuk memperdalam pengetahuan saya terkait pembuatan chatbot menggunakan model yang telah disediakan oleh pihak ke-tiga (di sini adalah IBM Cloud). Berikut adalah link dari chatbot yang sudah di deploy menggunakan Streamlit: [simple-chatbot-watsonxai](https://simple-chatbot-watsonxai-max-500-tokens.streamlit.app/)
 
 ## Kemampuan chatbot ini:
 - Dapat me-generate respon dengan maksimal 500 token atau ~370 kata
