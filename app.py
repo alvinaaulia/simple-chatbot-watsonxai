@@ -23,18 +23,6 @@ watsonx_llm = WatsonxLLM(
     callbacks=[StreamingStdOutCallbackHandler()]
 )
 
-# def estimate_tokens(text: str) -> int:
-#     """Simple token estimator (1 token ~4 chars)"""
-#     return len(text) // 4
-
-# def generate_long_response(prompt: str) -> str:
-#     response = watsonx_llm(f"Generate a 500-token response about: {prompt}")
-    
-#     while estimate_tokens(response) < 450:
-#         response += "\n" + watsonx_llm("Continue your previous response in detail.")
-    
-#     return response[:1000] 
-
 def estimate_tokens(text: str) -> int:
     """Estimasi lebih akurat dengan mix karakter-kata"""
     word_count = len(text.split())
@@ -80,7 +68,20 @@ def generate_precise_response(prompt: str, target_tokens=500) -> str:
     return full_response
 
 st.title('Ask watsonx!')
-st.write("Optimized for ~500-token responses")
+with st.expander("ℹ️ About This Chatbot"):
+    st.markdown("""
+    **Chatbot Capabilities:**
+    - Can generate responses up to 500 tokens or ~370 words
+    - Provides responses in structured format:
+      * Brief introduction
+      * Three main points
+      * Concise conclusion
+    
+    **Current Limitations:**
+    - May not understand all questions, potentially resulting in empty responses
+    - Responses may occasionally deviate from the intended context
+    - Accuracy may vary for complex or ambiguous queries
+    """)
 
 if 'messages' not in st.session_state:
     st.session_state.messages = []
